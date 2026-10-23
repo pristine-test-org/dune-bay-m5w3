@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Figwort shows one list</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #b5651d; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #b5651d, #c2185b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { margin: 0 -1rem; padding: 0; max-width: none; line-height: 1.6; }
+      /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 contrast. */
+      .quiet { color: #c8c8c8; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .small-link { font-size: 10px; color: var(--accent); }
+      ul.points { padding-left: 1.2rem; line-height: 1.8; }
+      .bar { height: 0.5rem; width: 30%; background: var(--accent); border-radius: 0.25rem;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Figwort</a>
+      <a class="small-link" href="/">Back to today's list</a>
+    </header>
+    <main>
+      <h1>Why one list is enough</h1>
+      <p class="edge">Figwort keeps to a single view: today's list, read from the shared project whenever you open the page, with nothing around it to pull your attention away.</p>
+      <p class="quiet">No menus, no settings, no account.</p>
+      <ul class="points">
+        <li>Only the five newest items appear.</li>
+        <li>Finished items carry a check mark.</li>
+        <li>An empty list says so, plainly.</li>
+      </ul>
+      <div class="bar" role="img" aria-label="Opens in under a third of a second"></div>
+    </main>
+    <footer>Figwort · the quiet one</footer>
+  </body>
+</html>
