@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Dropwort works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #2f7d4f; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #7a3fd1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { margin: 0 -1rem; padding: 0; max-width: none; line-height: 1.6; }
+      /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 contrast. */
+      .quiet { color: #c8c8c8; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .small-link { font-size: 10px; color: var(--accent); }
+      table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+      th, td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid #e5e5e0; }
+      .bar { height: 0.5rem; width: 30%; background: var(--accent); border-radius: 0.25rem;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Dropwort</a>
+      <a class="small-link" href="/">Back to the front door</a>
+    </header>
+    <main>
+      <h1>How the shared list works</h1>
+      <p class="edge">Everyone who opens Dropwort sees the same short list, read straight from the shared project each time the page loads, so what you see is always the latest five items.</p>
+      <p class="quiet">Nothing to install, nothing to sign in to.</p>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>What happens</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>The page asks the shared project for the newest items.</td></tr>
+          <tr><td>2</td><td>Finished items get a check mark.</td></tr>
+          <tr><td>3</td><td>An empty list says so, plainly.</td></tr>
+        </tbody>
+      </table>
+      <div class="bar" role="img" aria-label="Loads in under a third of a second"></div>
+    </main>
+    <footer>Dropwort · the calm front door</footer>
+  </body>
+</html>
