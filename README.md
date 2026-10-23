@@ -8,6 +8,6 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | App | Folder | Host | Production | Preview gate |
 |---|---|---|---|---|
-| Dropwort | `apps/dropwort-g4h` | Vercel | _not deployed_ | no |
-| Elecampane | `apps/elecampane-j5k` | Vercel | _not deployed_ | no |
-| Figwort | `apps/figwort-l6m` | Render | _not deployed_ | no |
+| Dropwort | `apps/dropwort-g4h` | Vercel | https://dune-bay-m5w3-dropwort-g4h.vercel.app | no |
+| Elecampane | `apps/elecampane-j5k` | Vercel | https://dune-bay-m5w3-elecampane-j5k.vercel.app | no |
+| Figwort | `apps/figwort-l6m` | Render | https://dune-bay-m5w3-figwort-l6m.onrender.com | no |
